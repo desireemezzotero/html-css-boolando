@@ -7,13 +7,20 @@
 :root {
   --navbar-color:rgb(255,104,0);
   --font-color:white;
-
+  --font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  --price-color:red;
+  --font-size:9px;
 }
 
+.body {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
 .container {
   margin:0 auto;
-  max-width: 650px;
+  max-width: 730px;
 }
+
 
 .d-flex {
   display: flex;
@@ -23,6 +30,8 @@ header{
   width: 100%;
   background-color: var(--navbar-color);
   position: fixed;
+  z-index: 999;
+
 }
 
 /* header */
@@ -49,6 +58,144 @@ ul li a {
   margin: 5px;
 }
 
+.img-logo {
+  width: 100px;
+  height: 25px;
+}
+
 .icon {
  color: var(--font-color);
+}
+
+/* main */
+.container-card {
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 90px;
+}
+
+.card {
+ height: 380px;
+ position: relative;
+}
+
+
+.img-card {
+  width: 230px;
+  height: 340px;
+  margin-left: 10px;
+  display: block;
+}
+
+.brand {
+  padding-left: 10px;
+  font-size: var(--font-size);
+}
+
+.description {
+  padding-left: 10px;
+  font-size:var(--font-size);
+}
+
+.price {
+  color:var(--price-color);
+  font-size: var(--font-size);
+  display: flex;
+  padding-left: 10px;
+}
+
+.none {
+  text-decoration:line-through;
+}
+
+.hearts {
+  position: absolute;
+  top:10px;
+  right:0px;
+  background-color: white ;
+  font-size: 22px;
+  padding: 2px 7px;
+}
+
+.hearts:hover {
+  color:red
+}
+
+.img-none {
+  display: none;
+  width: 230px;
+  height: 340px;
+  margin-left: 10px;
+
+}
+
+.img:hover .img-card{
+  display: none;
+}
+
+
+.img:hover .img-none{
+  display: block;
+}
+
+.discount{
+  position: absolute;
+  bottom: 45px;
+  background-color: red;
+  color: white;
+  padding: 5px 7px;
+  font-size: 10px;
+  margin: 10px;
+  font-family: var(--font-family);
+}
+
+.sustainability {
+  position: absolute;
+  bottom: 7px;
+  background-color: green;
+  color: white;
+  padding: 5px 7px;
+  font-size: 10px;
+  margin: 48px;
+  font-family: var(--font-family);
+}
+
+.end {
+  margin: 10px;
+  bottom: 45px;
+}
+
+/* footer */
+
+footer {
+  background-color: black;
+}
+
+.black {
+  background-color: black;
+  padding-top: 5px;
+  min-height: 70px;
+  
+}
+
+.row {
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}
+
+ul .foo li  {
+  flex-direction: row;
+}
+
+.foo li a {
+ font-size: 12px;
+}
+
+h4 , h6 {
+  color: white;
+}
+
+h6 {
+  text-align: center;
 }
